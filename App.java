@@ -6,6 +6,7 @@ write a java program to display the multiplication table for the given integer t
 Performing CIRUD Operations on Student class type object
 1. display square,cube,suareroot,cuberoot of the given integer type number;
 */
+// University->College->Dept->Student->Project; Company->Branch->Dept->Employee->Project;
 // public static void execution() {
 // 		/*{
 // 		Employee.company="Capgemini";
@@ -325,5 +326,93 @@ class App {
         car.getEngine().displayEngineDetails();
         car.setMediaPlayer(mediaPlayer);    //setter method dependency injection for aggregation  //Aggregation, setting from outside ; independent 
         car.getMediaPlayer().displayMediaPlayer();
+    }
+    public static void StudentProject() {
+        Scanner sc=new Scanner(System.in);
+        Student std1=new Student(1,"Mayank","390870439587");
+        Project project;
+        boolean flag=true;
+        while(flag){
+            System.out.println("\n=====STUDENT_PROJECT CRUD MENU======\n1. Create Project\n2. Read Project\n3. Update Project\n4. Delete Project\n5.======Exit=======\n");
+            int choice=sc.nextInt();
+            switch(choice){
+            case 1:
+                System.out.println("Enter Data for Creation\n");
+                System.out.print("Enter id ");
+                int id=sc.nextInt();
+                sc.nextLine();
+                System.out.print("Enter name ");
+                String name=sc.nextLine();
+                System.out.print("Enter desc ");
+                String desc=sc.nextLine();
+                project=new Project(id,name,desc);
+                std1.createProject(project);
+                break;
+            case 2:
+                std1.readProject();
+                break;
+            case 3:
+                System.out.println("Enter Data for Updation\n");
+                System.out.print("Enter id ");
+                id=sc.nextInt();
+                sc.nextLine();
+                System.out.print("Enter name ");
+                name=sc.nextLine();
+                System.out.print("Enter desc ");
+                desc=sc.nextLine();
+                std1.updateProject(id,name,desc);
+                break;
+            case 4:
+                System.out.print("Enter id number for deletion ");
+                id=sc.nextInt();
+                std1.deleteProject(id);
+                break;
+            case 5:
+                flag=false;
+                System.out.println("......EXITING");
+                break;
+            default:
+                System.out.println("Invalid Input for Menu");
+            }
+        }   
+    }
+    public static void SuperSub(){
+        System.out.println(Super.sv);
+        Super.staticMember();
+        Super supes=new Super();
+        supes.nonStaticMember();
+        System.out.println(supes.nonStaticVar);
+        System.out.println("=======================");
+        System.out.println(Sub.sv);
+        Sub.staticMember();
+        Sub sub=new Sub();
+        sub.nonStaticMember();
+        System.out.println(sub.nonStaticVar);
+    }
+    public static void MachineExec(){
+        Generator gen=new Generator();
+        gen.feature();
+        gen.execution();
+        gen.start();
+        gen.stop();
+        gen.run();
+    }
+    public static void Databases(){
+        MYSQL mysql=new MYSQL();
+        Oracle oracle=new Oracle();
+        mysql.username="NAME";
+        mysql.password="****";
+        mysql.url="www.mysql.com";
+        mysql.connection();
+        mysql.display();
+        mysql.CRUD();
+        oracle.username="NAME1";
+        oracle.password="*************";
+        oracle.url="www.oracle.com";
+        mysql.disconnection();
+        oracle.connection();
+        oracle.display();
+        oracle.CRUD();
+        oracle.disconnection();
     }
 }

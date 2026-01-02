@@ -23,6 +23,10 @@ class Main{
 		// System.out.println(id);
 		// System.out.println("id is "+ std1.id+ "\nname is "+ std1.name); //direct read = unsafe
 		// App.exec();
-		App.CarEngineMedia();
+		// App.CarEngineMedia();
+		// App.StudentProject();
+		// App.SuperSub();
+		// App.MachineExec();
+		App.Databases();
 	}
 }
