@@ -415,4 +415,23 @@ class App {
         oracle.CRUD();
         oracle.disconnection();
     }
+    public static void instanceOfExecution(){
+        Parent p=new Parent();
+        Child c=new Child();
+        Object o=new Object();
+        System.out.println(p instanceof Parent);
+        System.out.println(p instanceof Child);
+        System.out.println(p instanceof Object);
+        System.out.println(c instanceof Child);
+        System.out.println(c instanceof Object);
+        System.out.println(p instanceof Parent);
+        System.out.println(o instanceof Child);
+        System.out.println(o instanceof Object);
+        System.out.println(o instanceof Parent);
+    }
+    public static void SuperandThis(){
+        SubClassforSuper obj=new SubClassforSuper();
+        obj.displaySubInfo();
+        obj.displaySuperInfo();
+    }
 }

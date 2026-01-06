@@ -27,6 +27,8 @@ class Main{
 		// App.StudentProject();
 		// App.SuperSub();
 		// App.MachineExec();
-		App.Databases();
+		// App.Databases();
+		// App.instanceOfExecution();
+		App.SuperandThis();
 	}
 }
